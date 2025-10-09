@@ -44,11 +44,6 @@ public class VolumeButtonsPlugin: CAPPlugin, CAPBridgedPlugin {
         removeVolumeObserver()
     }
 
-    override public func handleReset() {
-        super.handleReset()
-        removeVolumeObserver()
-    }
-
     private func removeVolumeObserver() {
         guard observingVolume else { return }
 
