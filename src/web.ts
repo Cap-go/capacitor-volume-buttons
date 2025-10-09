@@ -1,10 +1,7 @@
 import { Capacitor, WebPlugin } from '@capacitor/core';
 import type { PluginListenerHandle } from '@capacitor/core';
 
-import type {
-  VolumeButtonListener,
-  VolumeButtonsPlugin,
-} from './definitions';
+import type { VolumeButtonListener, VolumeButtonsPlugin } from './definitions';
 
 export class VolumeButtonsWeb extends WebPlugin implements VolumeButtonsPlugin {
   private readonly platform = Capacitor.getPlatform();
@@ -14,10 +11,7 @@ export class VolumeButtonsWeb extends WebPlugin implements VolumeButtonsPlugin {
     listenerFunc: VolumeButtonListener,
   ): Promise<PluginListenerHandle> & PluginListenerHandle {
     this.notifyUnsupported();
-    return super.addListener(
-      eventName,
-      listenerFunc,
-    ) as Promise<PluginListenerHandle> & PluginListenerHandle;
+    return super.addListener(eventName, listenerFunc) as Promise<PluginListenerHandle> & PluginListenerHandle;
   }
 
   removeAllListeners(): Promise<void> {

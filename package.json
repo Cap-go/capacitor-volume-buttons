@@ -1,6 +1,6 @@
 {
   "name": "@capgo/volume-buttons",
-  "version": "0.0.1",
+  "version": "7.0.0",
   "description": "Listen to volume button presses in Capacitor apps",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",

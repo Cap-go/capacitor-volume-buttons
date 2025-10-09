@@ -27,7 +27,7 @@ public class VolumeButtonsPlugin: CAPPlugin, CAPBridgedPlugin {
     private var observingVolume = false
     private let audioSession = AVAudioSession.sharedInstance()
 
-    public override func load() {
+    override public func load() {
         super.load()
 
         do {
@@ -44,7 +44,7 @@ public class VolumeButtonsPlugin: CAPPlugin, CAPBridgedPlugin {
         removeVolumeObserver()
     }
 
-    public override func handleReset() {
+    override public func handleReset() {
         super.handleReset()
         removeVolumeObserver()
     }
@@ -56,7 +56,7 @@ public class VolumeButtonsPlugin: CAPPlugin, CAPBridgedPlugin {
         observingVolume = false
     }
 
-    public override func observeValue(
+    override public func observeValue(
         forKeyPath keyPath: String?,
         of object: Any?,
         change: [NSKeyValueChangeKey: Any]?,
