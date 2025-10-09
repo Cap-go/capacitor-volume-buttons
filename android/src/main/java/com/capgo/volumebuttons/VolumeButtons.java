@@ -1,11 +1,9 @@
 package com.capgo.volumebuttons;
 
-import com.getcapacitor.Logger;
+public final class VolumeButtons {
+    public static final String EVENT_VOLUME_BUTTON_PRESSED = "volumeButtonPressed";
 
-public class VolumeButtons {
-
-    public String echo(String value) {
-        Logger.info("Echo", value);
-        return value;
+    private VolumeButtons() {
+        // Utility class.
     }
 }

@@ -1,23 +1,89 @@
-import Foundation
+import AVFoundation
 import Capacitor
+import Foundation
+import MediaPlayer
+import UIKit
 
-/**
- * Please read the Capacitor iOS Plugin Development Guide
- * here: https://capacitorjs.com/docs/plugins/ios
- */
+private extension MPVolumeView {
+    static func setSystemVolume(_ volume: Float) {
+        let volumeView = MPVolumeView(frame: .zero)
+        guard let slider = volumeView.subviews.first(where: { $0 is UISlider }) as? UISlider else {
+            return
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
+            slider.value = volume
+        }
+    }
+}
+
 @objc(VolumeButtonsPlugin)
 public class VolumeButtonsPlugin: CAPPlugin, CAPBridgedPlugin {
     public let identifier = "VolumeButtonsPlugin"
     public let jsName = "VolumeButtons"
-    public let pluginMethods: [CAPPluginMethod] = [
-        CAPPluginMethod(name: "echo", returnType: CAPPluginReturnPromise)
-    ]
-    private let implementation = VolumeButtons()
+    public let pluginMethods: [CAPPluginMethod] = []
 
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
-        call.resolve([
-            "value": implementation.echo(value)
-        ])
+    private var audioLevel: Float = 0.0
+    private var observingVolume = false
+    private let audioSession = AVAudioSession.sharedInstance()
+
+    public override func load() {
+        super.load()
+
+        do {
+            try audioSession.setActive(true, options: [])
+            audioLevel = audioSession.outputVolume
+            audioSession.addObserver(self, forKeyPath: "outputVolume", options: .new, context: nil)
+            observingVolume = true
+        } catch {
+            CAPLog.print("VolumeButtonsPlugin", "Failed to activate audio session: \(error.localizedDescription)")
+        }
+    }
+
+    deinit {
+        removeVolumeObserver()
+    }
+
+    public override func handleReset() {
+        super.handleReset()
+        removeVolumeObserver()
+    }
+
+    private func removeVolumeObserver() {
+        guard observingVolume else { return }
+
+        audioSession.removeObserver(self, forKeyPath: "outputVolume", context: nil)
+        observingVolume = false
+    }
+
+    public override func observeValue(
+        forKeyPath keyPath: String?,
+        of object: Any?,
+        change: [NSKeyValueChangeKey: Any]?,
+        context: UnsafeMutableRawPointer?
+    ) {
+        guard keyPath == "outputVolume" else {
+            return
+        }
+
+        let newVolume = audioSession.outputVolume
+
+        let eventName = "volumeButtonPressed"
+
+        if newVolume > audioLevel {
+            audioLevel = newVolume
+            notifyListeners(eventName, data: ["direction": "up"])
+        } else if newVolume < audioLevel {
+            audioLevel = newVolume
+            notifyListeners(eventName, data: ["direction": "down"])
+        }
+
+        if newVolume >= 0.999 {
+            MPVolumeView.setSystemVolume(0.9375)
+            audioLevel = 0.9375
+        } else if newVolume <= 0.001 {
+            MPVolumeView.setSystemVolume(0.0625)
+            audioLevel = 0.0625
+        }
     }
 }
