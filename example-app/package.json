@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@capacitor/core": "latest",
-    "@capgo/volume-buttons": "file:..",
+    "@capgo/capacitor-volume-buttons": "file:..",
     "@capacitor/ios": "7.0.0",
     "@capacitor/android": "7.0.0"
   },

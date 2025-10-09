@@ -1,4 +1,4 @@
-# @capgo/volume-buttons
+# @capgo/capacitor-volume-buttons
  <a href="https://capgo.app/"><img src='https://raw.githubusercontent.com/Cap-go/capgo/main/assets/capgo_banner.png' alt='Capgo - Instant updates for capacitor'/></a>
 
 <div align="center">
@@ -10,7 +10,7 @@ Listen to volume button presses in Capacitor apps
 ## Install
 
 ```bash
-npm install @capgo/volume-buttons
+npm install @capgo/capacitor-volume-buttons
 npx cap sync
 ```
 

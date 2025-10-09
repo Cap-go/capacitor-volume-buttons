@@ -2,11 +2,11 @@
 import PackageDescription
 
 let package = Package(
-    name: "CapgoVolumeButtons",
+    name: "CapgoCapacitorVolumeButtons",
     platforms: [.iOS(.v14)],
     products: [
         .library(
-            name: "CapgoVolumeButtons",
+            name: "CapgoCapacitorVolumeButtons",
             targets: ["VolumeButtonsPlugin"])
     ],
     dependencies: [

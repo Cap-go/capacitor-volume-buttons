@@ -1,4 +1,4 @@
-import { VolumeButtons } from '@capgo/volume-buttons';
+import { VolumeButtons } from '@capgo/capacitor-volume-buttons';
 
 window.testEcho = () => {
     const inputValue = document.getElementById("echoInput").value;

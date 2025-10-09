@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "@capgo/volume-buttons",
+      "name": "@capgo/capacitor-volume-buttons",
       "devDependencies": {
         "@capacitor/android": "^7.0.0",
         "@capacitor/core": "^7.0.0",
