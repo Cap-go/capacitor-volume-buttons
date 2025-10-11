@@ -1,4 +1,4 @@
-package com.example.plugin;
+package app.capgo.volume.buttons;
 
 import com.getcapacitor.BridgeActivity;
 
