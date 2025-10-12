@@ -13,12 +13,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@capacitor/android": "7.0.0",
     "@capacitor/core": "latest",
-    "@capgo/capacitor-volume-buttons": "file:..",
     "@capacitor/ios": "7.0.0",
-    "@capacitor/android": "7.0.0"
+    "@capgo/capacitor-volume-buttons": "file:.."
   },
   "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
     "@capacitor/cli": "latest",
     "vite": "^5.4.2"
   },

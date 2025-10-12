@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace "app.capgo.volume.buttons"
+    namespace "app.capgo.plugin.VolumeButtons"
     compileSdk rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "app.capgo.volume.buttons"
+        applicationId "app.capgo.plugin.VolumeButtons"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
