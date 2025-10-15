@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [7.0.6](https://github.com/Cap-go/capacitor-volume-buttons/compare/7.0.5...7.0.6) (2025-10-15)
+
+
+### Bug Fixes
+
+* lock and lint ([47e80f2](https://github.com/Cap-go/capacitor-volume-buttons/commit/47e80f218a05fc09179ff74aaf954c1a31c77a29))
+
 ## [7.0.5](https://github.com/Cap-go/capacitor-volume-buttons/compare/7.0.4...7.0.5) (2025-10-15)
 
 
