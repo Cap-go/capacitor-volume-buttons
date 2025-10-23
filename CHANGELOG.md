@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [7.1.0](https://github.com/Cap-go/capacitor-volume-buttons/compare/7.0.7...7.1.0) (2025-10-23)
+
+
+### Features
+
+* add getPluginVersion method to VolumeButtonsPlugin and update workflows for changelog generation ([815aa49](https://github.com/Cap-go/capacitor-volume-buttons/commit/815aa49ebae39fb4755f20a663e2841ee079cbb9))
+
+
+### Bug Fixes
+
+* remove unnecessary content field from Discord release webhook ([c128164](https://github.com/Cap-go/capacitor-volume-buttons/commit/c128164618b780588aa5ead605dc82d1f8c5ce8e))
+
 ## [7.0.7](https://github.com/Cap-go/capacitor-volume-buttons/compare/7.0.6...7.0.7) (2025-10-16)
 
 ## [7.0.6](https://github.com/Cap-go/capacitor-volume-buttons/compare/7.0.5...7.0.6) (2025-10-15)
