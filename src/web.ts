@@ -24,4 +24,8 @@ export class VolumeButtonsWeb extends WebPlugin implements VolumeButtonsPlugin {
       console.warn('VolumeButtons is not supported in web builds.');
     }
   }
+
+  async getPluginVersion(): Promise<{ version: string }> {
+    return { version: 'web' };
+  }
 }

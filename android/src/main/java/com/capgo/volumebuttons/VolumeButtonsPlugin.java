@@ -9,6 +9,8 @@ import com.getcapacitor.annotation.CapacitorPlugin;
 @CapacitorPlugin(name = "VolumeButtons")
 public class VolumeButtonsPlugin extends Plugin {
 
+    private final String PLUGIN_VERSION = "";
+
     @Override
     public void load() {
         super.load();
@@ -38,5 +40,16 @@ public class VolumeButtonsPlugin extends Plugin {
                     }
                 }
             );
+    }
+
+    @PluginMethod
+    public void getPluginVersion(final PluginCall call) {
+        try {
+            final JSObject ret = new JSObject();
+            ret.put("version", this.PLUGIN_VERSION);
+            call.resolve(ret);
+        } catch (final Exception e) {
+            call.reject("Could not get plugin version", e);
+        }
     }
 }

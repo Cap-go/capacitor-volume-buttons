@@ -19,9 +19,12 @@ private extension MPVolumeView {
 
 @objc(VolumeButtonsPlugin)
 public class VolumeButtonsPlugin: CAPPlugin, CAPBridgedPlugin {
+    private let PLUGIN_VERSION: String = ""
     public let identifier = "VolumeButtonsPlugin"
     public let jsName = "VolumeButtons"
-    public let pluginMethods: [CAPPluginMethod] = []
+    public let pluginMethods: [CAPPluginMethod] = [
+        CAPPluginMethod(name: "getPluginVersion", returnType: CAPPluginReturnPromise)
+    ]
 
     private var audioLevel: Float = 0.0
     private var observingVolume = false
@@ -81,4 +84,9 @@ public class VolumeButtonsPlugin: CAPPlugin, CAPBridgedPlugin {
             audioLevel = 0.0625
         }
     }
+
+    @objc func getPluginVersion(_ call: CAPPluginCall) {
+        call.resolve(["version": self.PLUGIN_VERSION])
+    }
+
 }
