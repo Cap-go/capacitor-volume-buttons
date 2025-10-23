@@ -11,7 +11,7 @@ import com.getcapacitor.annotation.CapacitorPlugin;
 @CapacitorPlugin(name = "VolumeButtons")
 public class VolumeButtonsPlugin extends Plugin {
 
-    private final String PLUGIN_VERSION = "7.1.2";
+    private final String PLUGIN_VERSION = "7.1.3";
 
     @Override
     public void load() {

@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [7.1.3](https://github.com/Cap-go/capacitor-volume-buttons/compare/7.1.2...7.1.3) (2025-10-23)
+
+
+### Bug Fixes
+
+* add missing imports for PluginCall and PluginMethod ([ff16145](https://github.com/Cap-go/capacitor-volume-buttons/commit/ff16145c8e5699f84bdf2e9ce7d2f879b9947878))
+
 ## [7.1.2](https://github.com/Cap-go/capacitor-volume-buttons/compare/7.1.1...7.1.2) (2025-10-23)
 
 ## [7.1.1](https://github.com/Cap-go/capacitor-volume-buttons/compare/7.1.0...7.1.1) (2025-10-23)
