@@ -20,6 +20,7 @@ npx cap sync
 
 * [`addListener('volumeButtonPressed', ...)`](#addlistenervolumebuttonpressed-)
 * [`removeAllListeners()`](#removealllisteners)
+* [`getPluginVersion()`](#getpluginversion)
 * [Interfaces](#interfaces)
 * [Type Aliases](#type-aliases)
 
@@ -53,6 +54,19 @@ removeAllListeners() => Promise<void>
 ```
 
 Removes all listeners for this plugin.
+
+--------------------
+
+
+### getPluginVersion()
+
+```typescript
+getPluginVersion() => Promise<{ version: string; }>
+```
+
+Get the native Capacitor plugin version
+
+**Returns:** <code>Promise&lt;{ version: string; }&gt;</code>
 
 --------------------
 
