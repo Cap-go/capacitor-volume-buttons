@@ -29,6 +29,8 @@ npx cap sync
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
+Capacitor Volume Buttons Plugin for detecting hardware volume button presses.
+
 ### addListener('volumeButtonPressed', ...)
 
 ```typescript
@@ -37,12 +39,14 @@ addListener(eventName: 'volumeButtonPressed', listenerFunc: VolumeButtonListener
 
 Listen for presses on the hardware volume buttons.
 
-| Param              | Type                                                                  |
-| ------------------ | --------------------------------------------------------------------- |
-| **`eventName`**    | <code>'volumeButtonPressed'</code>                                    |
-| **`listenerFunc`** | <code><a href="#volumebuttonlistener">VolumeButtonListener</a></code> |
+| Param              | Type                                                                  | Description                                            |
+| ------------------ | --------------------------------------------------------------------- | ------------------------------------------------------ |
+| **`eventName`**    | <code>'volumeButtonPressed'</code>                                    | - The event name (must be 'volumeButtonPressed')       |
+| **`listenerFunc`** | <code><a href="#volumebuttonlistener">VolumeButtonListener</a></code> | - The function to call when a volume button is pressed |
 
 **Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt; & <a href="#pluginlistenerhandle">PluginListenerHandle</a></code>
+
+**Since:** 1.0.0
 
 --------------------
 
@@ -55,6 +59,8 @@ removeAllListeners() => Promise<void>
 
 Removes all listeners for this plugin.
 
+**Since:** 1.0.0
+
 --------------------
 
 
@@ -64,9 +70,11 @@ Removes all listeners for this plugin.
 getPluginVersion() => Promise<{ version: string; }>
 ```
 
-Get the native Capacitor plugin version
+Get the native Capacitor plugin version.
 
 **Returns:** <code>Promise&lt;{ version: string; }&gt;</code>
+
+**Since:** 1.0.0
 
 --------------------
 
@@ -83,9 +91,11 @@ Get the native Capacitor plugin version
 
 #### VolumeButtonPressed
 
-| Prop            | Type                                                                    |
-| --------------- | ----------------------------------------------------------------------- |
-| **`direction`** | <code><a href="#volumebuttondirection">VolumeButtonDirection</a></code> |
+Event data for volume button press.
+
+| Prop            | Type                                                                    | Description                   |
+| --------------- | ----------------------------------------------------------------------- | ----------------------------- |
+| **`direction`** | <code><a href="#volumebuttondirection">VolumeButtonDirection</a></code> | Direction of the button press |
 
 
 ### Type Aliases
@@ -93,10 +103,14 @@ Get the native Capacitor plugin version
 
 #### VolumeButtonListener
 
+Listener function for volume button events.
+
 <code>(event: <a href="#volumebuttonpressed">VolumeButtonPressed</a>): void</code>
 
 
 #### VolumeButtonDirection
+
+Direction of volume button press.
 
 <code>'up' | 'down'</code>
 
