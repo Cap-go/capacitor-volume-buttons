@@ -7,6 +7,10 @@
 </div>
 Listen to volume button presses in Capacitor apps
 
+## Documentation
+
+The most complete doc is available here: https://capgo.app/docs/plugins/volume-buttons/
+
 ## Install
 
 ```bash
