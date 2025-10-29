@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [7.1.7](https://github.com/Cap-go/capacitor-volume-buttons/compare/7.1.6...7.1.7) (2025-10-29)
+
+
+### Bug Fixes
+
+* CI/CD config ([276fc13](https://github.com/Cap-go/capacitor-volume-buttons/commit/276fc13c730ececc07bdd6926dd41da073c74ea5))
+* model github action ([52a31a3](https://github.com/Cap-go/capacitor-volume-buttons/commit/52a31a31e8cc86ea16e5e0e6be7a0d795508caea))
+* update github action ([cf088f3](https://github.com/Cap-go/capacitor-volume-buttons/commit/cf088f3bcb540d00bcca1e4c319957547c543c93))
+
 ## [7.1.6](https://github.com/Cap-go/capacitor-volume-buttons/compare/7.1.5...7.1.6) (2025-10-27)
 
 
