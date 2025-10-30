@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [7.1.8](https://github.com/Cap-go/capacitor-volume-buttons/compare/7.1.7...7.1.8) (2025-10-30)
+
+
+### Bug Fixes
+
+* pluginVersion lint issue ([eed061b](https://github.com/Cap-go/capacitor-volume-buttons/commit/eed061be7958051ae16f8bb9eabeaf452c945ae8))
+
 ## [7.1.7](https://github.com/Cap-go/capacitor-volume-buttons/compare/7.1.6...7.1.7) (2025-10-29)
 
 
