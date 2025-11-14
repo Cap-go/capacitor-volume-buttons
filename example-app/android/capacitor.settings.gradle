@@ -2,5 +2,5 @@
 include ':capacitor-android'
 project(':capacitor-android').projectDir = new File('../node_modules/@capacitor/android/capacitor')
 
-include ':capgo-volume-buttons'
-project(':capgo-volume-buttons').projectDir = new File('../../android')
+include ':capgo-capacitor-volume-buttons'
+project(':capgo-capacitor-volume-buttons').projectDir = new File('../../android')
