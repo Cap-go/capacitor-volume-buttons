@@ -19,7 +19,7 @@ private extension MPVolumeView {
 
 @objc(VolumeButtonsPlugin)
 public class VolumeButtonsPlugin: CAPPlugin, CAPBridgedPlugin {
-    private let pluginVersion: String = "8.0.7"
+    private let pluginVersion: String = "8.0.8"
     public let identifier = "VolumeButtonsPlugin"
     public let jsName = "VolumeButtons"
     public let pluginMethods: [CAPPluginMethod] = [
