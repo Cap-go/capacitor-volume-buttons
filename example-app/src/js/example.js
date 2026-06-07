@@ -1,3 +1,4 @@
+import { CapacitorUpdater } from '@capgo/capacitor-updater';
 import { Capacitor } from '@capacitor/core';
 import { VolumeButtons } from '@capgo/capacitor-volume-buttons';
 
@@ -98,4 +99,10 @@ if (platform === 'web') {
   log('Note: VolumeButtons is not supported on web. Deploy to iOS or Android hardware to receive events.');
 } else {
   log(`Platform detected: ${platform}. Ready to listen for volume button presses.`);
+}
+
+if (Capacitor.isNativePlatform()) {
+  CapacitorUpdater.notifyAppReady().catch((error) => {
+    console.error('Capgo notifyAppReady failed', error);
+  });
 }
