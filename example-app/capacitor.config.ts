@@ -4,7 +4,7 @@ import pkg from './package.json';
 
 const config: CapacitorConfig = {
   appId: 'app.capgo.volume.buttons',
-  appName: 'Volume Buttons Example',
+  appName: '@capgo/capacitor-volume-buttons',
   webDir: 'dist',
   plugins: {
     SplashScreen: {
