@@ -1,11 +1,27 @@
 # @capgo/capacitor-volume-buttons
-<a href="https://capgo.app/"><img src="https://capgo.app/readme-banner.svg?repo=Cap-go/capacitor-volume-buttons" alt="Capgo - Instant updates for Capacitor" /></a>
+
+React to the hardware volume buttons in your Capacitor app, to take a photo, turn a page or trigger any action.
+
+<a href="https://capgo.app/?ref=plugin_volume_buttons"><img src="https://capgo.app/readme-banner.svg?repo=Cap-go/capacitor-volume-buttons" alt="Capgo - Instant updates for Capacitor" /></a>
 
 <div align="center">
-  <h2><a href="https://capgo.app/?ref=plugin_volume_buttons"> ➡️ Get Instant updates for your App with Capgo</a></h2>
-  <h2><a href="https://capgo.app/consulting/?ref=plugin_volume_buttons"> Missing a feature? We’ll build the plugin for you 💪</a></h2>
+  <p><b>Capgo</b>: open-source live updates for Ionic and Capacitor apps. Ship OTA fixes and features instantly, without waiting for app store review.</p>
+  <h2><a href="https://capgo.app/register/?ref=plugin_volume_buttons">➡️ Get started for free</a></h2>
+  <p>14-day unlimited free trial. No credit card required</p>
+  <p><a href="https://capgo.app/consulting/?ref=plugin_volume_buttons">Missing a feature? We'll build the plugin for you 💪</a></p>
 </div>
-Listen to volume button presses in Capacitor apps
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cap-go/capacitor-volume-buttons/main/assets/github-social-preview.png" alt="@capgo/capacitor-volume-buttons for Capacitor apps" width="300" />
+</p>
+
+## Key features
+
+- **Button events**: the `volumeButtonPressed` listener reports `up` or `down`.
+- **iOS**: watches the audio session output volume.
+- **Android**: listens for volume key events.
+- **Clean up**: `removeAllListeners()` removes your listeners. Native monitoring stops when the plugin instance is destroyed.
+- **Platforms**: iOS and Android. Not available on web.
 
 ## Documentation
 
