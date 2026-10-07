@@ -20,7 +20,7 @@ React to the hardware volume buttons in your Capacitor app, to take a photo, tur
 - **Button events**: the `volumeButtonPressed` listener reports `up` or `down`.
 - **iOS**: watches the audio session output volume.
 - **Android**: listens for volume key events.
-- **Clean up**: `removeAllListeners()` stops listening.
+- **Clean up**: `removeAllListeners()` removes your listeners. Native monitoring stops when the plugin instance is destroyed.
 - **Platforms**: iOS and Android. Not available on web.
 
 ## Documentation
